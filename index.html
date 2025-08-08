@@ -1,215 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home — Rich Hustler</title>
-  <meta name="description" content="Rich Hustler — Minimal luxury fashion." />
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
-  <!-- Styles & JS (RELATIVE paths) -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichHustler - Official Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #111;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        header img.logo {
+            height: 60px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #111;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #b89d5c;
+        }
+
+        /* HERO */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1520975922071-a92f942b710b') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-family: 'Didot', serif;
+            background: rgba(0,0,0,0.4);
+            padding: 20px 40px;
+        }
+
+        /* COLLECTIONS PREVIEW */
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 60px;
+        }
+        .collection-item {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .collection-item:hover {
+            transform: scale(1.03);
+        }
+        .collection-item img {
+            width: 100%;
+            height: auto;
+        }
+        .collection-item h3 {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        footer a {
+            color: #b89d5c;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <nav class="nav">
-      <div class="dropdown">
-        <button class="dropbtn">Men</button>
-        <div class="dropdown-content">
-          <a href="men/index.html">All</a>
-          <a href="men/tees.html">T-Shirts</a>
-          <a href="men/hoodies.html">Hoodies</a>
-          <a href="men/sets.html">Matching Sets</a>
-          <a href="men/shoes.html">Shoes</a>
-          <a href="men/boxers.html">Boxers</a>
-          <a href="men/coats.html">Coats</a>
-          <a href="men/sleep.html">Sleepwear</a>
-          <a href="men/jeans.html">Jeans</a>
-          <a href="men/sunglasses.html">Sunglasses</a>
+    <!-- HEADER -->
+    <header>
+        <a href="index.html">
+            <img src="images/rh-logo.png" alt="RichHustler Logo" class="logo">
+        </a>
+        <nav>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact</a>
+            <a href="shipping.html">Shipping</a>
+            <a href="returns.html">Returns</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>RichHustler</h1>
+    </section>
+
+    <!-- COLLECTIONS PREVIEW -->
+    <section class="collections">
+        <div class="collection-item">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Menswear">
+            <h3>Menswear</h3>
         </div>
-      </div>
-
-      <!-- Brand updated to RichHustler per your note -->
-      <a class="brand" href="index.html">RichHustler</a>
-
-      <div class="dropdown">
-        <button class="dropbtn">Women</button>
-        <div class="dropdown-content">
-          <a href="women/index.html">All</a>
-          <a href="women/purses.html">Purses</a>
-          <a href="women/croptops.html">Crop Tops</a>
-          <a href="women/sets.html">Matching Sets</a>
-          <a href="women/jeans.html">Jeans</a>
-          <a href="women/lingerie.html">Lingerie</a>
-          <a href="women/sleep.html">Sleepwear</a>
-          <a href="women/sunglasses.html">Sunglasses</a>
+        <div class="collection-item">
+            <img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070" alt="Womenswear">
+            <h3>Womenswear</h3>
         </div>
-      </div>
-    </nav>
+        <div class="collection-item">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Accessories">
+            <h3>Accessories</h3>
+        </div>
+    </section>
 
-    <a href="cart.html" class="cart-link">Cart (0)</a>
-  </div>
-</header>
-
-<section class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1520975599570-8619d276eb1b?q=80&w=2400&auto=format&fit=crop" alt="Editorial fashion" />
-  <div class="overlay"></div>
-  <div class="container">
-    <!-- Brand-forward hero copy -->
-    <h1>RichHustler</h1>
-    <p>Minimal design. Maximum motion. Luxury built for those who move different.</p>
-    <div class="cta">
-      <a class="btn primary" href="women/index.html">Shop Women</a>
-      <a class="btn" href="men/index.html">Shop Men</a>
-    </div>
-  </div>
-</section>
-
-<section class="marquee">
-  <div class="inner">
-    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · RICH HUSTLER · NEW ARRIVALS WEEKLY · FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · RICH HUSTLER · NEW ARRIVALS WEEKLY ·
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split">
-    <a class="pane" href="women/sets.html">
-      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" alt="Women editorial" />
-      <div class="copy">
-        <div class="eyebrow">Women</div>
-        <div class="headline">Matching Sets</div>
-      </div>
-    </a>
-    <a class="pane" href="women/purses.html">
-      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1600&auto=format&fit=crop" alt="Purses" />
-      <div class="copy">
-        <div class="eyebrow">Women</div>
-        <div class="headline">Purses</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-head">
-    <h2>For Him</h2>
-    <a href="men/index.html">View All</a>
-  </div>
-  <div class="container grid cols-3">
-    <a class="card" href="men/hoodies.html">
-      <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1600&auto=format&fit=crop" alt="Hoodies" />
-      <div class="label"><div class="kicker">Men</div><div class="title">Hoodies</div></div>
-    </a>
-    <a class="card" href="men/jeans.html">
-      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1600&auto=format&fit=crop" alt="Jeans" />
-      <div class="label"><div class="kicker">Men</div><div class="title">Jeans</div></div>
-    </a>
-    <a class="card" href="men/shoes.html">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop" alt="Shoes" />
-      <div class="label"><div class="kicker">Men</div><div class="title">Shoes</div></div>
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-head">
-    <h2>For Her</h2>
-    <a href="women/index.html">View All</a>
-  </div>
-  <div class="container grid cols-3">
-    <a class="card" href="women/croptops.html">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Crop Tops" />
-      <div class="label"><div class="kicker">Women</div><div class="title">Crop Tops</div></div>
-    </a>
-    <a class="card" href="women/jeans.html">
-      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1600&auto=format&fit=crop" alt="Jeans" />
-      <div class="label"><div class="kicker">Women</div><div class="title">Jeans</div></div>
-    </a>
-    <a class="card" href="women/sunglasses.html">
-      <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1600&auto=format&fit=crop" alt="Sunglasses" />
-      <div class="label"><div class="kicker">Women</div><div class="title">Sunglasses</div></div>
-    </a>
-  </div>
-</section>
-
-<!-- Brand Story -->
-<section class="section">
-  <div class="container">
-    <div class="section-head"><h2>The RichHustler Standard</h2></div>
-    <p class="muted" style="max-width:70ch">
-      Born from the streets, refined for the world stage. RichHustler blends raw ambition with timeless design.
-      Premium fabrics. Tailored fits. Pieces engineered for confidence and longevity.
-    </p>
-    <div class="grid cols-3" style="margin-top:18px">
-      <div class="feature">
-        <div class="kicker">Craft</div>
-        <div class="title">Premium Materials</div>
-        <p>Heavyweight cotton, brushed fleece, and sculpted denim — built for daily wear.</p>
-      </div>
-      <div class="feature">
-        <div class="kicker">Fit</div>
-        <div class="title">Modern Silhouettes</div>
-        <p>Precision cuts with room to move. Minimal branding, maximal presence.</p>
-      </div>
-      <div class="feature">
-        <div class="kicker">Care</div>
-        <div class="title">Easy Returns</div>
-        <p>30-day returns. Free U.S. shipping on orders $150+.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section class="section" style="border-top:1px solid var(--border);">
-  <div class="container" style="text-align:center;max-width:760px;">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;margin:0 0 8px;">Join the Hustle</h2>
-    <p class="muted" style="margin:0 0 16px;">Get early access to drops, exclusive offers, and RichHustler events.</p>
-    <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-      <input type="email" required placeholder="Your email address" 
-             style="background:var(--panel);color:var(--text);border:1px solid var(--border);padding:12px;border-radius:8px;min-width:260px;">
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="brand small">RichHustler</div>
-      <p class="muted">Quiet luxury. Minimal design. Built for those who move different.</p>
-    </div>
-    <div>
-      <div class="kicker">Shop</div>
-      <div class="sep"></div>
-      <div><a href="men/index.html">Men</a></div>
-      <div><a href="women/index.html">Women</a></div>
-      <div><a href="collections.html">Collections</a></div>
-      <div><a href="contact.html">Contact</a></div>
-    </div>
-    <div>
-      <div class="kicker">Support</div>
-      <div class="sep"></div>
-      <div><a href="shipping.html">Shipping</a></div>
-      <div><a href="returns.html">Returns</a></div>
-      <div><a href="faq.html">FAQ</a></div>
-    </div>
-    <div>
-      <div class="kicker">Follow</div>
-      <div class="sep"></div>
-      <div><a href="#">Instagram</a></div>
-      <div><a href="#">YouTube</a></div>
-      <div><a href="#">Twitter</a></div>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2025 Rich Hustler. All rights reserved.</div>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 RichHustler. All Rights Reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
 
 </body>
 </html>
+
 
