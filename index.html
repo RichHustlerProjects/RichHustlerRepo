@@ -1,267 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home — Rich Hustler</title>
-  <meta name="description" content="Rich Hustler — Minimal luxury fashion." />
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
-  
-  <!-- Styles -->
-  <style>
-    :root {
-      --text: #111;
-      --bg: #fff;
-      --panel: #f9f9f9;
-      --border: #ddd;
-      --accent: #000;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-    header.site-header {
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 500;
-    }
-    .brand img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    nav.nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropbtn {
-      background: none;
-      border: none;
-      font: inherit;
-      cursor: pointer;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: var(--bg);
-      min-width: 160px;
-      border: 1px solid var(--border);
-      z-index: 10;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .dropdown-content a {
-      padding: 10px;
-      display: block;
-      border-bottom: 1px solid var(--border);
-    }
-    .cart-link {
-      font-size: 14px;
-    }
-    .hero {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .hero img.bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-    .hero .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: -1;
-    }
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 60px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 1px solid var(--bg);
-      background: transparent;
-      color: var(--bg);
-      margin: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .btn.primary {
-      background: var(--bg);
-      color: var(--text);
-    }
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-      padding: 8px 0;
-      background: var(--panel);
-    }
-    .marquee .inner {
-      display: inline-block;
-      animation: scroll 20s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .section {
-      padding: 60px 0;
-    }
-    .split {
-      display: flex;
-      gap: 20px;
-    }
-    .split .pane {
-      position: relative;
-      overflow: hidden;
-    }
-    .split .copy {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #fff;
-    }
-    footer.site-footer {
-      background: var(--panel);
-      padding: 40px 0 20px;
-      font-size: 14px;
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-      gap: 20px;
-    }
-    .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 12px;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichHustler Clothing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* HEADER */
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid gold;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: gold;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin-left: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: gold;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            color: gold;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero a {
+            background-color: gold;
+            color: black;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        .hero a:hover {
+            background-color: white;
+        }
+
+        /* FEATURED PRODUCTS */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 50px 0 30px;
+            color: black;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0 50px;
+            flex-wrap: wrap;
+        }
+        .product {
+            width: 300px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            border: 2px solid gold;
+        }
+        .product h3 {
+            margin: 15px 0 5px;
+        }
+        .product p {
+            color: #666;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-top: 2px solid gold;
+        }
+        footer a {
+            color: gold;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <nav class="nav">
-      <div class="dropdown">
-        <button class="dropbtn">Men</button>
-        <div class="dropdown-content">
-          <a href="men/index.html">All</a>
-          <a href="men/tees.html">T-Shirts</a>
-          <a href="men/hoodies.html">Hoodies</a>
-          <a href="men/sets.html">Matching Sets</a>
+    <!-- HEADER -->
+    <header>
+        <h1>RICH HUSTLER</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Luxury Streetwear, Elevated</h2>
+            <p>Experience premium design, bold style, and unstoppable ambition.</p>
+            <a href="collections.html">Shop Now</a>
         </div>
-      </div>
-    </nav>
+    </section>
 
-    <!-- Logo + Brand -->
-    <a class="brand" href="index.html">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Dior_Logo.svg/2560px-Dior_Logo.svg.png" alt="RichHustler Logo" />
-      RichHustler
-    </a>
-
-    <nav class="nav">
-      <div class="dropdown">
-        <button class="dropbtn">Women</button>
-        <div class="dropdown-content">
-          <a href="women/index.html">All</a>
-          <a href="women/purses.html">Purses</a>
-          <a href="women/croptops.html">Crop Tops</a>
-          <a href="women/sets.html">Matching Sets</a>
+    <!-- FEATURED PRODUCTS -->
+    <h2 class="section-title">Featured Pieces</h2>
+    <section class="products">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="RichHustler Hoodie">
+            <h3>Gold Logo Hoodie</h3>
+            <p>$120</p>
         </div>
-      </div>
-      <a href="cart.html" class="cart-link">Cart (0)</a>
-    </nav>
-  </div>
-</header>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="RichHustler Jacket">
+            <h3>Signature Jacket</h3>
+            <p>$220</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="RichHustler Cap">
+            <h3>Gold Emblem Cap</h3>
+            <p>$50</p>
+        </div>
+    </section>
 
-<section class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1520975599570-8619d276eb1b?q=80&w=2400&auto=format&fit=crop" alt="Editorial fashion" />
-  <div class="overlay"></div>
-  <div class="container">
-    <h1>RichHustler</h1>
-    <p>Minimal design. Maximum motion. Luxury built for those who move different.</p>
-    <div class="cta">
-      <a class="btn primary" href="women/index.html">Shop Women</a>
-      <a class="btn" href="men/index.html">Shop Men</a>
-    </div>
-  </div>
-</section>
-
-<section class="marquee">
-  <div class="inner">
-    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · RICH HUSTLER · NEW ARRIVALS WEEKLY · 
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="brand small">RichHustler</div>
-      <p>Quiet luxury. Minimal design. Built for those who move different.</p>
-    </div>
-    <div>
-      <div>Shop</div>
-      <a href="men/index.html">Men</a>
-      <a href="women/index.html">Women</a>
-    </div>
-    <div>
-      <div>Support</div>
-      <a href="shipping.html">Shipping</a>
-      <a href="returns.html">Returns</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2025 Rich Hustler. All rights reserved.</div>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 RichHustler Clothing. All rights reserved. | <a href="shipping.html">Shipping</a> | <a href="returns.html">Returns</a></p>
+    </footer>
 
 </body>
 </html>
