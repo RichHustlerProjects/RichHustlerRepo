@@ -6,12 +6,12 @@
   <title>Home — RichHustler</title>
   <meta name="description" content="RichHustler — Quiet luxury with an edge. Essentials for the relentless." />
 
-  <!-- Fonts (sleek, not blocky) -->
+  <!-- Fonts: smooth, refined (no blocky vibes) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- CSS / JS -->
+  <!-- CSS + JS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
 </head>
@@ -37,7 +37,7 @@
       </div>
     </nav>
 
-    <!-- Wordmark (font-only, no image) -->
+    <!-- Wordmark (font-only, luxe serif) -->
     <a class="brand" href="index.html">RichHustler</a>
 
     <nav class="nav">
@@ -61,8 +61,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1602810318383-e3b71c6da92d?q=80&w=2400&auto=format&fit=crop" alt="Editorial luxury fashion" />
+  <img class="bg" src="https://images.unsplash.com/photo-1602810318383-e3b71c6da92d?q=80&w=2400&auto=format&fit=crop" alt="Editorial fashion" />
   <div class="overlay"></div>
+
   <div class="container hero-inner">
     <h1>Quiet Luxury. Bold Motion.</h1>
     <p>Minimal silhouettes. Premium fabrics. Designed for those who move different.</p>
@@ -71,13 +72,15 @@
       <a class="btn" href="men/index.html">Shop Men</a>
     </div>
   </div>
+
+  <!-- Subtle monogram watermark -->
   <div class="brand-mark" aria-hidden="true">RH</div>
 </section>
 
 <!-- MARQUEE -->
 <section class="marquee">
   <div class="inner">
-    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · NEW ARRIVALS WEEKLY · RICHHUSTLER · FREE SHIPPING OVER $150 ·
+    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · NEW ARRIVALS WEEKLY · RICHHUSTLER · FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · NEW ARRIVALS WEEKLY ·
   </div>
 </section>
 
@@ -101,52 +104,85 @@
   </div>
 </section>
 
-<!-- NEW ARRIVALS (from products.json) -->
+<!-- NEW ARRIVALS (dynamic from products.json) -->
 <section class="section">
   <div class="container section-head">
     <h2>New Arrivals</h2>
     <a href="collections.html">View All</a>
   </div>
 
-  <!-- Skeleton loaders (replaced by JS) -->
   <div id="home-grid" class="container grid cols-3">
+    <!-- skeletons while loading -->
     <div class="card skeleton"></div>
     <div class="card skeleton"></div>
     <div class="card skeleton"></div>
   </div>
 </section>
 
-<!-- BRAND STORY -->
-<section class="section">
-  <div class="container">
-    <div class="section-head"><h2>The RichHustler Standard</h2></div>
-    <p class="muted lead">
-      Born from ambition and crafted with precision. Our pieces merge quiet luxury with relentless energy — 
-      tailored fits, premium materials, and details that endure.
-    </p>
-    <div class="grid cols-3 features">
-      <div class="feature reveal">
-        <div class="kicker">Craft</div>
-        <div class="title">Premium Materials</div>
-        <p>Heavyweight cottons, brushed fleece, sculpted denim — made for daily wear and long runs.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="kicker">Fit</div>
-        <div class="title">Modern Silhouettes</div>
-        <p>Precision cuts with room to move. Minimal branding, maximal presence.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="kicker">Care</div>
-        <div class="title">Easy Returns</div>
-        <p>30-day returns. Free U.S. shipping on orders $150+.</p>
+<!-- EDITORIAL STRIP (full-bleed) -->
+<section class="editorial">
+  <div class="container editorial-inner reveal">
+    <div class="copy">
+      <div class="eyebrow">Campaign</div>
+      <h3>Golden Hour — AW/25</h3>
+      <p>Tailored layers. Soft sheen. Elements of motion. Discover the season’s refined silhouettes and signature textures.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="collections.html">Explore the Edit</a>
+        <a class="btn" href="women/index.html">Shop the Looks</a>
       </div>
     </div>
+    <div class="media">
+      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?q=80&w=2000&auto=format&fit=crop" alt="Campaign" />
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="section">
+  <div class="container section-head">
+    <h2>For Him</h2>
+    <a href="men/index.html">View All</a>
+  </div>
+  <div class="container grid cols-3">
+    <a class="card reveal" href="men/hoodies.html">
+      <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1600&auto=format&fit=crop" alt="Hoodies" />
+      <div class="label"><div class="kicker">Men</div><div class="title">Hoodies</div></div>
+    </a>
+    <a class="card reveal" href="men/jeans.html">
+      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1600&auto=format&fit=crop" alt="Jeans" />
+      <div class="label"><div class="kicker">Men</div><div class="title">Jeans</div></div>
+    </a>
+    <a class="card reveal" href="men/shoes.html">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop" alt="Shoes" />
+      <div class="label"><div class="kicker">Men</div><div class="title">Shoes</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container section-head">
+    <h2>For Her</h2>
+    <a href="women/index.html">View All</a>
+  </div>
+  <div class="container grid cols-3">
+    <a class="card reveal" href="women/croptops.html">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Crop Tops" />
+      <div class="label"><div class="kicker">Women</div><div class="title">Crop Tops</div></div>
+    </a>
+    <a class="card reveal" href="women/jeans.html">
+      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1600&auto=format&fit=crop" alt="Jeans" />
+      <div class="label"><div class="kicker">Women</div><div class="title">Jeans</div></div>
+    </a>
+    <a class="card reveal" href="women/sunglasses.html">
+      <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1600&auto=format&fit=crop" alt="Sunglasses" />
+      <div class="label"><div class="kicker">Women</div><div class="title">Sunglasses</div></div>
+    </a>
   </div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter section">
-  <div class="container nl-inner">
+  <div class="container nl-inner reveal">
     <h3>Join the Hustle</h3>
     <p class="muted">Get early access to drops, exclusive offers, and events.</p>
     <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!')">
@@ -190,4 +226,5 @@
 
 </body>
 </html>
+
 
