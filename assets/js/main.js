@@ -47,10 +47,10 @@ async function loadProducts(){
   if(!grid) return;
 
   const products = await loadProducts();
-  // Curate 6: prefer tees/hoodies/shoes first for punch
-  const prioritized = ['men/tees','men/hoodies','men/shoes','women/sets','women/purses','women/sunglasses'];
+  // Curate 6 with a bias toward visual bangers
+  const priority = ['men/hoodies','men/shoes','men/tees','women/sets','women/purses','women/sunglasses'];
   const featured = [
-    ...products.filter(p => prioritized.includes(p.category)).slice(0,6),
+    ...products.filter(p => priority.includes(p.category)).slice(0,6),
     ...products.slice(0,6)
   ].slice(0,6);
 
@@ -86,7 +86,7 @@ async function loadProducts(){
       <div><img src="${p.images?.[0]||p.image}" alt="${p.name}" style="border:1px solid var(--border);border-radius:8px;"></div>
       <div>
         <div class="kicker">${p.gender==='men'?'Men':'Women'} • ${p.category.split('/')[1].replace('-', ' ')}</div>
-        <h1 class="title" style="font-size:32px;font-family:'Cormorant Garamond',serif;">${p.name}</h1>
+        <h1 class="title" style="font-size:32px;font-family:'Playfair Display',serif;font-style:italic;">${p.name}</h1>
         <div style="margin:8px 0 16px; font-weight:600;">$${p.price}</div>
         <p class="muted" style="max-width:46ch;">${p.desc}</p>
         <div class="sep" style="height:1px;background:var(--border);margin:16px 0;"></div>
@@ -175,4 +175,5 @@ function observeReveals(){
   els.forEach(el=>io.observe(el));
 }
 observeReveals();
+
 
