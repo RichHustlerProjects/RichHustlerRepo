@@ -3,188 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home — Rich Hustler</title>
-  <meta name="description" content="Rich Hustler — Quiet luxury fashion for those who move different." />
-  
-  <!-- Fonts -->
+  <title>Home — RichHustler</title>
+  <meta name="description" content="RichHustler — Quiet luxury with an edge. Essentials for the relentless." />
+
+  <!-- Fonts (sleek, not blocky) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  
-  <!-- Styles -->
-  <style>
-    :root {
-      --text: #fff;
-      --bg: #000;
-      --gold: #d4af37;
-      --border: rgba(255,255,255,0.15);
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container {
-      width: 90%;
-      max-width: 1400px;
-      margin: auto;
-    }
-    header.site-header {
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-    }
-    .brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    nav.nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropbtn {
-      background: none;
-      border: none;
-      font: inherit;
-      cursor: pointer;
-      color: var(--text);
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: var(--bg);
-      min-width: 160px;
-      border: 1px solid var(--border);
-      top: 30px;
-    }
-    .dropdown-content a {
-      padding: 10px;
-      display: block;
-      color: var(--text);
-      font-size: 13px;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .hero {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .hero img.bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-    .hero .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: -1;
-    }
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 72px;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-      color: var(--gold);
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      border: 1px solid var(--gold);
-      background: transparent;
-      color: var(--gold);
-      margin: 15px 8px 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background: var(--gold);
-      color: var(--bg);
-    }
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-      padding: 8px 0;
-      background: rgba(255,255,255,0.03);
-      color: var(--gold);
-    }
-    .marquee .inner {
-      display: inline-block;
-      animation: scroll 20s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    footer.site-footer {
-      background: var(--bg);
-      padding: 50px 0 20px;
-      font-size: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap: 30px;
-      margin-bottom: 20px;
-    }
-    .footer-inner h4 {
-      color: var(--gold);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .footer-inner a {
-      display: block;
-      margin: 4px 0;
-      font-size: 13px;
-    }
-    .footer-bottom {
-      text-align: center;
-      font-size: 12px;
-      color: #aaa;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS / JS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
 
@@ -198,10 +27,17 @@
           <a href="men/tees.html">T-Shirts</a>
           <a href="men/hoodies.html">Hoodies</a>
           <a href="men/sets.html">Matching Sets</a>
+          <a href="men/shoes.html">Shoes</a>
+          <a href="men/boxers.html">Boxers</a>
+          <a href="men/coats.html">Coats</a>
+          <a href="men/sleep.html">Sleepwear</a>
+          <a href="men/jeans.html">Jeans</a>
+          <a href="men/sunglasses.html">Sunglasses</a>
         </div>
       </div>
     </nav>
 
+    <!-- Wordmark (font-only, no image) -->
     <a class="brand" href="index.html">RichHustler</a>
 
     <nav class="nav">
@@ -212,6 +48,10 @@
           <a href="women/purses.html">Purses</a>
           <a href="women/croptops.html">Crop Tops</a>
           <a href="women/sets.html">Matching Sets</a>
+          <a href="women/jeans.html">Jeans</a>
+          <a href="women/lingerie.html">Lingerie</a>
+          <a href="women/sleep.html">Sleepwear</a>
+          <a href="women/sunglasses.html">Sunglasses</a>
         </div>
       </div>
       <a href="cart.html" class="cart-link">Cart (0)</a>
@@ -219,45 +59,135 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1602810318383-e3b71c6da92d?q=80&w=2400&auto=format&fit=crop" alt="Luxury fashion" />
+  <img class="bg" src="https://images.unsplash.com/photo-1602810318383-e3b71c6da92d?q=80&w=2400&auto=format&fit=crop" alt="Editorial luxury fashion" />
   <div class="overlay"></div>
-  <div class="container">
-    <h1>RichHustler</h1>
-    <p>Minimal design. Maximum motion. Quiet luxury for those who move different.</p>
-    <div>
-      <a class="btn" href="women/index.html">Shop Women</a>
+  <div class="container hero-inner">
+    <h1>Quiet Luxury. Bold Motion.</h1>
+    <p>Minimal silhouettes. Premium fabrics. Designed for those who move different.</p>
+    <div class="cta">
+      <a class="btn primary" href="women/index.html">Shop Women</a>
       <a class="btn" href="men/index.html">Shop Men</a>
+    </div>
+  </div>
+  <div class="brand-mark" aria-hidden="true">RH</div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee">
+  <div class="inner">
+    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · NEW ARRIVALS WEEKLY · RICHHUSTLER · FREE SHIPPING OVER $150 ·
+  </div>
+</section>
+
+<!-- FEATURED SPLIT BANNERS -->
+<section class="section">
+  <div class="container split">
+    <a class="pane reveal" href="women/sets.html">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" alt="Women's Matching Sets" />
+      <div class="copy">
+        <div class="eyebrow">Women</div>
+        <div class="headline">Matching Sets</div>
+      </div>
+    </a>
+    <a class="pane reveal" href="women/purses.html">
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=2000&auto=format&fit=crop" alt="Purses" />
+      <div class="copy">
+        <div class="eyebrow">Women</div>
+        <div class="headline">Purses</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS (from products.json) -->
+<section class="section">
+  <div class="container section-head">
+    <h2>New Arrivals</h2>
+    <a href="collections.html">View All</a>
+  </div>
+
+  <!-- Skeleton loaders (replaced by JS) -->
+  <div id="home-grid" class="container grid cols-3">
+    <div class="card skeleton"></div>
+    <div class="card skeleton"></div>
+    <div class="card skeleton"></div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2>The RichHustler Standard</h2></div>
+    <p class="muted lead">
+      Born from ambition and crafted with precision. Our pieces merge quiet luxury with relentless energy — 
+      tailored fits, premium materials, and details that endure.
+    </p>
+    <div class="grid cols-3 features">
+      <div class="feature reveal">
+        <div class="kicker">Craft</div>
+        <div class="title">Premium Materials</div>
+        <p>Heavyweight cottons, brushed fleece, sculpted denim — made for daily wear and long runs.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="kicker">Fit</div>
+        <div class="title">Modern Silhouettes</div>
+        <p>Precision cuts with room to move. Minimal branding, maximal presence.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="kicker">Care</div>
+        <div class="title">Easy Returns</div>
+        <p>30-day returns. Free U.S. shipping on orders $150+.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="marquee">
-  <div class="inner">
-    FREE SHIPPING OVER $150 · EASY 30-DAY RETURNS · RICH HUSTLER · NEW ARRIVALS WEEKLY · 
+<!-- NEWSLETTER -->
+<section class="newsletter section">
+  <div class="container nl-inner">
+    <h3>Join the Hustle</h3>
+    <p class="muted">Get early access to drops, exclusive offers, and events.</p>
+    <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!')">
+      <input type="email" placeholder="Your email address" required />
+      <button class="btn primary" type="submit">Subscribe</button>
+    </form>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>
-      <h4>RichHustler</h4>
-      <p>Quiet luxury. Minimal design. Built for those who move different.</p>
+      <div class="brand small">RichHustler</div>
+      <p class="muted">Quiet luxury. Minimal design. Built for those who move different.</p>
     </div>
     <div>
-      <h4>Shop</h4>
-      <a href="men/index.html">Men</a>
-      <a href="women/index.html">Women</a>
+      <div class="kicker">Shop</div>
+      <div class="sep"></div>
+      <div><a href="men/index.html">Men</a></div>
+      <div><a href="women/index.html">Women</a></div>
+      <div><a href="collections.html">Collections</a></div>
+      <div><a href="contact.html">Contact</a></div>
     </div>
     <div>
-      <h4>Support</h4>
-      <a href="shipping.html">Shipping</a>
-      <a href="returns.html">Returns</a>
-      <a href="faq.html">FAQ</a>
+      <div class="kicker">Support</div>
+      <div class="sep"></div>
+      <div><a href="shipping.html">Shipping</a></div>
+      <div><a href="returns.html">Returns</a></div>
+      <div><a href="faq.html">FAQ</a></div>
+    </div>
+    <div>
+      <div class="kicker">Follow</div>
+      <div class="sep"></div>
+      <div><a href="#">Instagram</a></div>
+      <div><a href="#">YouTube</a></div>
+      <div><a href="#">Twitter</a></div>
     </div>
   </div>
-  <div class="footer-bottom">© 2025 Rich Hustler. All rights reserved.</div>
+  <div class="footer-bottom">© 2025 RichHustler. All rights reserved.</div>
 </footer>
 
 </body>
 </html>
+
