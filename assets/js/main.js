@@ -12,7 +12,7 @@ document.addEventListener('click', () => {
   document.querySelectorAll('.dropdown-content').forEach(dc => dc.style.display = 'none');
 });
 
-// ===== Cart badge state =====
+// ===== Cart state =====
 const RH = {
   state: { cart: JSON.parse(localStorage.getItem('rh_cart') || '[]') },
   saveCart(){ localStorage.setItem('rh_cart', JSON.stringify(this.state.cart)); RH.updateCartBadge(); },
@@ -47,7 +47,6 @@ async function loadProducts(){
   if(!grid) return;
 
   const products = await loadProducts();
-  // Curate 6 with a bias toward visual bangers
   const priority = ['men/hoodies','men/shoes','men/tees','women/sets','women/purses','women/sunglasses'];
   const featured = [
     ...products.filter(p => priority.includes(p.category)).slice(0,6),
@@ -71,25 +70,27 @@ async function loadProducts(){
   observeReveals();
 })();
 
-// ===== PDP (works with your existing product.html) =====
+// ===== PDP =====
 (async function(){
   const holder = document.getElementById('pdp');
   if(!holder) return;
+
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
+
   const products = await loadProducts();
   const p = products.find(x=>x.id===id) || products[0];
   if(!p) return;
 
   holder.innerHTML = `
     <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:24px; padding:40px 0;">
-      <div><img src="${p.images?.[0]||p.image}" alt="${p.name}" style="border:1px solid var(--border);border-radius:8px;"></div>
+      <div><img src="${p.images?.[0]||p.image}" alt="${p.name}" style="border:1px solid var(--border);border-radius:8px; width:100%;"></div>
       <div>
         <div class="kicker">${p.gender==='men'?'Men':'Women'} • ${p.category.split('/')[1].replace('-', ' ')}</div>
-        <h1 class="title" style="font-size:32px;font-family:'Playfair Display',serif;font-style:italic;">${p.name}</h1>
+        <h1 class="title" style="font-size:32px;">${p.name}</h1>
         <div style="margin:8px 0 16px; font-weight:600;">$${p.price}</div>
         <p class="muted" style="max-width:46ch;">${p.desc}</p>
-        <div class="sep" style="height:1px;background:var(--border);margin:16px 0;"></div>
+        <div class="sep"></div>
         ${p.sizes?.length ? `
           <label class="kicker" for="size">Size</label>
           <div style="margin-top:8px;">
@@ -129,7 +130,7 @@ async function loadProducts(){
   wrap.innerHTML = `
     <section class="section container">
       <h2>Your Cart</h2>
-      <div class="sep" style="height:1px;background:var(--border);margin:16px 0;"></div>
+      <div class="sep"></div>
       <div style="display:grid;grid-template-columns:1fr 360px;gap:24px;">
         <div>${items.map((i,idx)=>`
           <div style="display:grid;grid-template-columns:90px 1fr 100px;gap:14px;align-items:center;border-bottom:1px solid var(--border);padding:12px 0;">
@@ -160,7 +161,7 @@ async function loadProducts(){
   }
 })();
 
-// ===== Reveal on scroll =====
+// ===== Reveal on scroll (for .reveal elements) =====
 function observeReveals(){
   const els = document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('is-visible')); return; }
@@ -175,5 +176,3 @@ function observeReveals(){
   els.forEach(el=>io.observe(el));
 }
 observeReveals();
-
-
